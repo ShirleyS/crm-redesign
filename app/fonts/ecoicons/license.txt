@@ -1,2 +1,19 @@
-Icon Set:	Eco Ico -- http://dribbble.com/shots/665585-Eco-Ico
-License:	CC0 -- http://creativecommons.org/publicdomain/zero/1.0/
+
+  <script type="text/x-handlebars" id="customer">
+    {{#if isEditing}}
+      {{partial 'customer/edit'}}
+      <button {{action 'doneEditing'}}>Done</button>
+      {{else}}
+      <button {{action 'edit'}}>Edit</button>
+      {{/if}}
+    <h1>{{title}}</h1>
+    <h2>{{customer_name}} <small class='muted'>({{format-date date}})</small></h2>
+    <hr>
+    <div class="intro">
+      {{email}}
+    </div>
+    
+    <div class="below-the-fold">
+      {{timestamp}}
+    </div>
+  </script>
