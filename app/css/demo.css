@@ -22,8 +22,6 @@ body {
 	background: white;
 	height: 240px;
 	color: #566473;
-	/*border-bottom: 1px solid #c6d0da;*/
-
 }
 
 .container > header a {
@@ -46,7 +44,6 @@ body {
 .container > header span {
 	display: block;
 	font-size: 55%;
-	/*color: #428bca;*/
 	padding: 0;
 }
 
