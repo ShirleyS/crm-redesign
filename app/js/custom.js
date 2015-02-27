@@ -14,7 +14,7 @@ $(function() {
 
   $(".expand").on( "click", function() {
     var self = $(this);
-      $(this).next().slideToggle("slow");
+      $(this).next().slideToggle(0);
     
     $expand = $(this).find(">:first-child");
  
