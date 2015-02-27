@@ -47,57 +47,92 @@
      
       <li class="kit-logo"><a href="#">Kit. CRM</a></li>
     </ul>
-    <header>
       <script type="text/x-handlebars">
- 
-            <li>{{#link-to 'customers'}}Customers{{/link-to}}</li>
-            <li>{{#link-to 'about'}}About{{/link-to}}</li>
-         
       {{outlet}}
       </script>
+    <header>
+      <div class="header-sec-1">
+        <a href="#">
+        <div class="chart-text">Recent Signed Up User:</div>
+        <div>John Hansen</div>
+        <div>Synergy HomeCare</div>
+        <div>Health/Medical/Pharmaceuticals</div>
+        <img width="100px" src="https://scontent-1.11404.fna.fbcdn.net/hphotos-xap1/t31.0-8/1146131_10152556671113846_3887792816263946146_o.jpg">
+        <div>SYNERGY HomeCare is the premier provider of home care services. We strive to offer our clients the highest quality of life and independence possible.</div>
+        </a>
+      </div>
+      
+      <div class="header-sec-2">
+        <div class="chart-text">Recent User Activity:</div>
+     
+          <!-- <img width="380px" src="https://ga-dev-tools.appspot.com/public/images/embed-api/screenshot.png"> -->
+      <img width="100%" src="http://basicblogtips.com/wp-content/uploads/2012/04/Viewbix-Charts.jpg">
 
-      <h5>Most Recent Campaign: "2 Months for 1 - Spring 2015"</h5>
-      <a href="http://www.kitcrm.com">
-      <img width="350px" src="http://basicblogtips.com/wp-content/uploads/2012/04/Viewbix-Charts.jpg"></a>
-        
+      </div>
+      
+      <div class="header-sec-3">    
+        <ul>
+          <li>Currently Open Tasks:&nbsp;&nbsp;&nbsp;&nbsp;39</li>
+          <li>New Tasks (last 24 hrs):&nbsp;6</li>
+          <li>% Active Members Today:&nbsp;78%</li>
+          <li>Without Card:&nbsp;260</li>
+          <li>Current Paid:&nbsp;500</li>
+          <li>Expiring in the next 48 hrs:&nbsp;92</li>
+          <li>+/- 2 weeks:&nbsp;80</li>
+          <li>Shopify:&nbsp;50</li>
+          <li>Etsy:&nbsp;60</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
     </header> 
   </div>
 
 
 <!-- Accordion Customers -->
-  <script type="text/x-handlebars" id="customers">
-    <div>
-        <thead>
-         <tr><th class="sort_by"><a href="#">Newest</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Name</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Account Type</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Trial Ending</a></th>
+  <script type="text/x-handlebars" id="index">
+    <div class="menu-div">
+        <thead><br/>
+         <tr><th class="sort_by">Open Task &nbsp;<a href="#">Newest</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Name</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Account Type</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Trial Ending</a></th>
          </tr>
         </thead>
 
         <tr>
           <div id="integration-list">
+
             <ul>{{#each}}
-              <li style="width:60em">
+          
+              <li>
                 <div class="expand">
                   <span class="right-arrow" style="width:10%;float:right;height:100%;" >+</span>
-                    <span class="menu-cell" style="width:90%;float:left;height:100%;">  
-                      {{email}}  {{#link-to 'customer' this}} {{customer_name}} {{/link-to}} DATE CREATED FB Terms: Yes Trial Status: 15 Days Ads Run:2
+                    <span class="menu-cell" style="width:70%;float:left;height:100%;">  
+                      {{email}}|{{#link-to 'customer' this}} {{customer_name}} {{/link-to}} |{{format-date date}} |Trial Status: 15 Days |Ads Run:2 &nbsp;&nbsp;&nbsp;&nbsp;
                     </span>
                    
+                   <span>OPEN</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>unassigned</span>
+
                   </div>
                   <div class="detail">
                     <div id="left">
                      <div id="sup">
-                        <img src="http://www.ciagent.com/ciagent/cialogo4.png"/>
+                   
                       </div>
                     </div>
 
                     <div id="right" style="width:85%;float:right;height:100%;padding-left:20px;">
                       <div id="sup">
                         <div>
-                        <span> Platforms: Facebook, Twitter Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
+                         
+                          <span> I am getting duplicate texts every time I message Kit. Please help!</span>
 
+                           <br />
                           <br />
-                          <br />
-                          <a href="#">Run Report</a><a href="#">Text</a><a href="#">Email</a><a href="#">Edit</a>
+                          <a href="#">Run Report</a>
+                          <a href="#">Email</a>
+                          <a href="#">Text</a>
+                          <a href="#">Edit</a>
+                          <a href="#">Assign</a>
                         </div>
                       </div>
                     </div>
@@ -121,7 +156,7 @@
       <p> This is fake lorem ipsum, um ipsum lorem? lorem ipsum, um ipsum lorem lorem ipsum, um ipsum lorem lorem ipsum, um ipsum lorem lorem ipsum, um ipsum lorem lorem ipsum, um ipsum loremlorem ipsum, um ipsum loremlorem ipsum, um ipsum lorem</p>
     </div>
 
-       <p>{{input type="text" value=customer_name}}</p>
+    <p>{{input type="text" value=customer_name}}</p>
     <p>{{input type="text" value=email}}</p>
     <p>{{textarea value=timestamp}}</p>
   </script>

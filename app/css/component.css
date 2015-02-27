@@ -1,5 +1,4 @@
 /*kit colors
-
 #428bca // 42ca81 //ca428b
 #00adef // 00ef42 // ef00ad
 #5f6f81
@@ -323,7 +322,6 @@ input.gn-search:focus {
 			-webkit-transform: translateX(0px);
 			-moz-transform: translateX(0px);
 			transform: translateX(0px);
-			width: 100%;
 	}
 
 	.gn-menu-wrapper.gn-open-all .gn-scroller {
@@ -331,12 +329,19 @@ input.gn-search:focus {
 	}
 }
 
+
+
+
+
+
+.menu-div {
+	padding: 0 9% 0 9%;
+}
+
 #integration-list {
     font-family: 'Open Sans', sans-serif;
-    display: block;
-    padding: 0 4em 0 10em;
- 
 }
+
 #integration-list ul {
     padding: 0;
     width: 100%;
@@ -356,7 +361,6 @@ input.gn-search:focus {
 #integration-list ul > li:hover {
     background: #efefef;
 }
-
 
 .expand {
     display: block;
@@ -397,7 +401,7 @@ span {
     margin: 10px 0 10px 0px;
     display: none;
     line-height: 22px;
-    height: 150px;
+    height: 100px;
 }
 
 .detail span{
