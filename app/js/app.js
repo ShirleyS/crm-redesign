@@ -206,7 +206,7 @@ var customers = [{
 	audiences:'twitter',
 	ads_run: 0,
 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-	,{
+	},{
 	id:'14',
 	customer_name:'Test Name14',
 	date: new Date('02-26-2015'),
@@ -218,7 +218,7 @@ var customers = [{
 	audiences:'twitter',
 	ads_run: 0,
 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-	,{
+	},{
 	id:'15',
 	customer_name:'Test Name15',
 	date: new Date('02-26-2015'),
@@ -230,7 +230,7 @@ var customers = [{
 	audiences:'twitter',
 	ads_run: 0,
 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-	,{
+	},{
 	id:'16',
 	customer_name:'Test Name16',
 	date: new Date('02-26-2015'),
@@ -242,7 +242,7 @@ var customers = [{
 	audiences:'twitter',
 	ads_run: 0,
 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-	,{
+	},{
 	id:'17',
 	customer_name:'Test Name17',
 	date: new Date('02-26-2015'),
@@ -254,7 +254,7 @@ var customers = [{
 	audiences:'twitter',
 	ads_run: 0,
 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-	,{
+	},{
 	id:'18',
 	customer_name:'Test Name18',
 	date: new Date('02-26-2015'),
@@ -266,7 +266,7 @@ var customers = [{
 	audiences:'twitter',
 	ads_run: 0,
 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-	,{
+	},{
 	id:'19',
 	customer_name:'Test Name19',
 	date: new Date('02-26-2015'),
@@ -278,7 +278,7 @@ var customers = [{
 	audiences:'twitter',
 	ads_run: 0,
 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-	,{
+	},{
 	id:'20',
 	customer_name:'Test Name20',
 	date: new Date('02-26-2015'),
@@ -290,7 +290,7 @@ var customers = [{
 	audiences:'twitter',
 	ads_run: 0,
 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-	,{
+	},{
 	id:'21',
 	customer_name:'Test Name21',
 	date: new Date('02-26-2015'),
@@ -301,5 +301,6 @@ var customers = [{
 	terms_accepted: false,
 	audiences:'twitter',
 	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}];
+	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+	}];
 
