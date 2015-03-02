@@ -52,7 +52,18 @@
       </script>
     <header>
       <div>
-        <div class="header-sec-1 container-module">
+        <div class="header-sec-1">
+          <a href="#">
+          <div class="chart-text">Recent Signed Up User:</div>
+          <div>John Hansen</div>
+          <div>Synergy HomeCare</div>
+          <div>Health/Medical/Pharmaceuticals</div>
+          <img width="100px" src="https://scontent-1.11404.fna.fbcdn.net/hphotos-xap1/t31.0-8/1146131_10152556671113846_3887792816263946146_o.jpg">
+          <div>SYNERGY HomeCare is the premier provider of home care services. We strive to offer our clients the highest quality of life and independence possible.</div>
+          </a>
+        </div>
+        
+        <div class="header-sec-2">
           <div class="chart-text">Recent User Activity:</div>
        
             <!-- <img width="380px" src="https://ga-dev-tools.appspot.com/public/images/embed-api/screenshot.png"> -->
@@ -60,11 +71,11 @@
 
         </div>
         
-        <div class="header-sec-2 container-module">    
+        <div class="header-sec-3">    
           <ul>
-            <li>Open Tasks:&nbsp;&nbsp;&nbsp;&nbsp;39</li>
-         <!--    <li>New Tasks (last 24 hrs):&nbsp;6</li> -->
-       <!--      <li>% Active Members Today:&nbsp;78%</li> -->
+            <li>Currently Open Tasks:&nbsp;&nbsp;&nbsp;&nbsp;39</li>
+            <li>New Tasks (last 24 hrs):&nbsp;6</li>
+            <li>% Active Members Today:&nbsp;78%</li>
             <li>Without Card:&nbsp;260</li>
             <li>Current Paid:&nbsp;500</li>
             <li>Expiring in the next 48 hrs:&nbsp;92</li>
@@ -81,85 +92,57 @@
 <!-- Accordion Customers -->
   <script type="text/x-handlebars" id="index">
     <div class="menu-div">
-      <div class="integration-list">
-        <h5>Recent Signups</h5>
-        <ul class="left-col">
-          {{#each customers}}
-          <li>
-            <div class="expand">
-              <span class="right-arrow">+</span>
-                <span class="menu-cell">  
-                  {{email}}|{{#link-to 'customer' this}} {{customer_name}} {{/link-to}} |{{format-date date}} |Trial Status: 15 Days |Ads Run:2 &nbsp;&nbsp;&nbsp;&nbsp;
-                </span>
-           
+        <thead><br/>
+         <tr><th class="sort_by">Open Task &nbsp;<a href="#">Newest</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Name</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Account Type</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Trial Ending</a></th>
+         </tr>
+        </thead>
 
-              </div>
-              <div class="detail">
+        <tr>
+          <div id="integration-list">
 
-                <div class="right" style="width:85%;float:right;height:100%;padding-left:10px;">
-                  <div class="sup">
-                    <div>
-                     
-                      <span> I am getting duplicate texts every time I message Kit. Please help!</span>
-
-                      <br />
-                      <br />
-                      <a href="#">Run Report</a>
-                      <a href="#">Email</a>
-                      <a href="#">Text</a>
-                      <a href="#">Edit</a>
-                      <a href="#">Assign</a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </li>            
-          {{/each}}
-        </ul>
-      </div>
-
-      <div class="integration-list">
-        <h5>Recent Tickets</h5>
-        <ul class="right-col">
-          {{#each tickets}}
-          <li>
-            <div class="expand">
-              <span class="right-arrow" style="width:10%;float:right;height:100%;" >+</span>
-              <span class="menu-cell">  
-                  {{title}} {{customer_name}}
-              </span>
-               
-              <span>OPEN</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>unassigned</span>
-
-            </div>
-              
-            <div class="detail">
-
-              <div class="right" style="width:85%;float:right;height:100%;padding-left:20px;">
-                <div class="sup">
-                  <div>
+            <ul>{{#each}}
+          
+              <li>
+                <div class="expand">
+                  <span class="right-arrow" style="width:10%;float:right;height:100%;" >+</span>
+                    <span class="menu-cell" style="width:70%;float:left;height:100%;">  
+                      {{email}}|{{#link-to 'customer' this}} {{customer_name}} {{/link-to}} |{{format-date date}} |Trial Status: 15 Days |Ads Run:2 &nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
                    
-                    <span> I am getting duplicate texts every time I message Kit. Please help!</span>
+                   <span>OPEN</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>unassigned</span>
 
-                    <br />
-                    <br />
-                    <a href="#">Run Report</a>
-                    <a href="#">Email</a>
-                    <a href="#">Text</a>
-                    <a href="#">Edit</a>
-                    <a href="#">Assign</a>
                   </div>
+                  <div class="detail">
+                    <div id="left">
+                     <div id="sup">
+                   
+                      </div>
+                    </div>
+
+                    <div id="right" style="width:85%;float:right;height:100%;padding-left:20px;">
+                      <div id="sup">
+                        <div>
+                         
+                          <span> I am getting duplicate texts every time I message Kit. Please help!</span>
+
+                           <br />
+                          <br />
+                          <a href="#">Run Report</a>
+                          <a href="#">Email</a>
+                          <a href="#">Text</a>
+                          <a href="#">Edit</a>
+                          <a href="#">Assign</a>
+                        </div>
+                      </div>
+                    </div>
                 </div>
-              </div>
-            </div>     
-          </li>            
-          {{/each}}
-        </ul>
-      </div>
+              </li>            
+                {{/each}}
+            </ul>
+          </div>
+        </tr>
+      
     </div>
-
-
-            
     <div class="span9">
       {{outlet}}
     </div>

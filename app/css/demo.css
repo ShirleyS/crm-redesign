@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #428bca;
+	background: white;
 	/*background: url("http://www.b71.be/wp-content/uploads/2014/06/background_blue_v0011.jpg");*/
 	padding-left: 60px;
 }
@@ -20,9 +20,6 @@ body {
 	padding: 0 0 0 9%;
 }
 
-.container > header > div {
-	max-width: 55em;
-}
 
 .container > header a {
 	color: #566473;
@@ -44,6 +41,15 @@ body {
 	font-size: 55%;
 	padding: 0;
 }
+
+
+.container-module {
+	border: 1px solid #c6d0da;
+  /*display: block;*/
+  padding: 0 15px;
+
+}
+
 
 .header-sec-1 {
 	display: inline-block;
@@ -93,9 +99,9 @@ body {
 	}
 }*/
 
-@media screen and (max-width: 740px) {
+/*@media screen and (max-width: 740px) {
 	.kit-logo span {
 		display: none;
 	}
 
-}
+}*/

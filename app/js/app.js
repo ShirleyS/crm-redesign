@@ -7,6 +7,13 @@ App.Customer = DS.Model.extend({
 });
 
 
+App.Ticket = DS.Model.extend({
+  title: DS.attr('string'),
+  // customer_name: DS.attr('string'),
+  timestamp: DS.attr('number')
+});
+
+
 App.Router.map(function(){
 	this.resource('about');
 	this.resource('customers', function(){
@@ -15,11 +22,26 @@ App.Router.map(function(){
 	});
 });
 
+
+// App.IndexController = Ember.ArrayController.extend({
+//   limitedContent: function() {
+//     // in this case '2' is the limit parameter
+//     return this.get('content').splice(0, 2);
+//   }.property('content')
+// });
+
 App.IndexRoute = Ember.Route.extend({
-	model: function(){
-		return customers
-	}
+  model: function() {
+    return {
+    	customers:customers,
+    	tickets:tickets
+    }
+     
+ 	}
+	// console.log("hi")
 });
+
+
 
 App.CustomersRoute = Ember.Route.extend({
 	model: function(){
@@ -175,136 +197,150 @@ var customers = [{
 	audiences:'twitter',
 	ads_run: 0,
 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'11',
-	customer_name:'Test Name11',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email11.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'12',
-	customer_name:'Test Name12',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email12.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'13',
-	customer_name:'Test Name13',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email13.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'14',
-	customer_name:'Test Name14',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email14.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'15',
-	customer_name:'Test Name15',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email15.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'16',
-	customer_name:'Test Name16',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email16.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'17',
-	customer_name:'Test Name17',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email17.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'18',
-	customer_name:'Test Name18',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email18.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'19',
-	customer_name:'Test Name19',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email19.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'20',
-	customer_name:'Test Name20',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email20.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
-},{
-	id:'21',
-	customer_name:'Test Name21',
-	date: new Date('02-26-2015'),
-	phone: '',
-	email: 'name@email21.com',
-	phone_confirmed: false,
-	pages:{paid:true, company: 'Catering'},
-	terms_accepted: false,
-	audiences:'twitter',
-	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+
+// },{
+// 	id:'11',
+// 	customer_name:'Test Name11',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email11.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'12',
+// 	customer_name:'Test Name12',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email12.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'13',
+// 	customer_name:'Test Name13',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email13.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'14',
+// 	customer_name:'Test Name14',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email14.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'15',
+// 	customer_name:'Test Name15',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email15.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'16',
+// 	customer_name:'Test Name16',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email16.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'17',
+// 	customer_name:'Test Name17',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email17.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'18',
+// 	customer_name:'Test Name18',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email18.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'19',
+// 	customer_name:'Test Name19',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email19.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'20',
+// 	customer_name:'Test Name20',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email20.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+// },{
+// 	id:'21',
+// 	customer_name:'Test Name21',
+// 	date: new Date('02-26-2015'),
+// 	phone: '',
+// 	email: 'name@email21.com',
+// 	phone_confirmed: false,
+// 	pages:{paid:true, company: 'Catering'},
+// 	terms_accepted: false,
+// 	audiences:'twitter',
+// 	ads_run: 0,
+// 	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
 }];
+
+
+var tickets =[{id:'1',title:'Receiving duplicate texts', customer_name:"John Doe 0"},
+{id:'2',title:'Kit not responding', customer_name:"John Doe1"},
+{id:'3',title:"I need to change my number", customer_name:"John Doe2"},
+{id:'4',title:"I need to change my number", customer_name:"John Doe3"},
+{id:'5',title:"I need to change my number", customer_name:"John Doe4"},
+{id:'6',title:"I need to change my number", customer_name:"John Doe5"},
+{id:'7',title:"I need to change my number", customer_name:"John Doe6"},
+{id:'8',title:"I need to change my number", customer_name:"John Doe7"},
+{id:'9',title:"I need to change my number", customer_name:"John Doe8"},
+{id:'10',title:"I need to change my number", customer_name:"John Doe9"}
+];

@@ -19,12 +19,12 @@ $(function() {
     $expand = $(this).find(">:first-child");
  
     if($expand.text() == "+") {
-      self.parent().css("background-color", "white");
+      self.parent().css("background-color", "#c6d0da");
       $expand.text("-");
      
     } 
     else {
-      self.parent().css("background-color", "#428bca");
+      self.parent().css("background-color", "white");
       $expand.text("+");
     }
 

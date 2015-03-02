@@ -35,11 +35,6 @@
 }
 
 .gn-menu-main {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 60px;
 		font-size: 13px;
 		color: white;
 }
@@ -331,34 +326,36 @@ input.gn-search:focus {
 
 
 
-
-
-
 .menu-div {
-	padding: 0 9% 0 9%;
+	width: 100%;
+	padding: 0 0 0 9%;
 }
 
-#integration-list {
+.integration-list {
     font-family: 'Open Sans', sans-serif;
+    width: 45%;
+  
+    display: inline-block;
 }
 
-#integration-list ul {
-    padding: 0;
+.integration-list ul {
     width: 100%;
     color: #555;
+    padding: 0;
 }
-#integration-list ul > li {
+.integration-list ul > li {
+    : 1px solid #c6d0da;
     list-style: none;
-    border-top: 1px solid #ddd;
     display: block;
-    padding: 0 15px;
+    padding: 0;
     overflow: hidden;
+    height:100%;
     /*background-color: white;*/
 }
-#integration-list ul:last-child {
-    border-bottom: 1px solid #ddd;
-}
-#integration-list ul > li:hover {
+/*.integration-list ul:last-child {
+    border-bottom: 1px solid #c6d0da;
+}*/
+.integration-list ul > li:hover {
     background: #efefef;
 }
 
@@ -379,13 +376,12 @@ span {
   font-size: 12.5px;
 }
 
-#left,#right{
-    display: block;
-
+.left,.right{
+    display: inline-block;
 }
 
-#sup{
-    display: block;
+.sup{
+    display: inline-block;
     vertical-align: middle;
     /*width: 90%;*/
 }
@@ -428,6 +424,16 @@ span {
     float: left;
     margin: 0 15px 0 0;
 }
+/*
+.left-col {
+	float: left;
+	display: inline-block;
+}
 
 
+.right-col{
+	float: right;
+	display: inline-block;
 
+}
+*/
