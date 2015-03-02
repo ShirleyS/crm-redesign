@@ -129,11 +129,13 @@
 		-webkit-transition: -webkit-transform 0.3s, width 0.3s;
 		-moz-transition: -moz-transform 0.3s, width 0.3s;
 		transition: transform 0.3s, width 0.3s;
+		z-index: 1;
 }
 
 .gn-scroller {
 
 		position: absolute;
+
 		/*overflow-y: scroll;*/
 		width: 320px;
 		height:100%;
@@ -320,7 +322,8 @@ input.gn-search:focus {
 	}
 
 	.gn-menu-wrapper.gn-open-all .gn-scroller {
-			width: 130%
+			width: 130%;
+			z-index: 3;
 	}
 }
 
@@ -334,29 +337,43 @@ input.gn-search:focus {
 .integration-list {
     font-family: 'Open Sans', sans-serif;
     width: 45%;
-  
+  	z-index: 1;
     display: inline-block;
 }
 
 .integration-list ul {
-    width: 100%;
+    width: 40%;
     color: #555;
-    padding: 0;
+    padding: 0 3em 0 0;
+    display: block;
+    position: absolute;
 }
 .integration-list ul > li {
-    : 1px solid #c6d0da;
+   	border-bottom: 1px solid #c6d0da;
+    /*: 1px solid #c6d0da;*/
     list-style: none;
     display: block;
     padding: 0;
     overflow: hidden;
-    height:100%;
-    /*background-color: white;*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    max-width:300px
+    min-width:120px;
 }
 /*.integration-list ul:last-child {
     border-bottom: 1px solid #c6d0da;
 }*/
 .integration-list ul > li:hover {
     background: #efefef;
+}
+
+.menu-row{
+	padding: 0 10px;
+  vertical-align: top;
+	display: inline-block;
+	font-size: 12.5px;
+
 }
 
 .expand {
@@ -409,13 +426,16 @@ span {
     text-align: right;
     width: 10px;
     height: 100%;
-    float: right;
+    /*float: right;*/
     font-weight: bold;
     font-size: 20px;
 }
 
 .menu-cell{
 	display:inline-block;
+	font-size: 12.5px;
+	width:88%;
+	/*text-decoration: none;*/
 }
 
 .icon {
@@ -423,6 +443,102 @@ span {
     width: 75px;
     float: left;
     margin: 0 15px 0 0;
+}
+
+.tag-open{
+	background-color:#ca428b;
+	float: right;
+	color: white;
+	font-size: 10px;
+	display: inline-block;
+	text-align: center;
+	width: 8%;
+	margin-left:12px;
+	overflow: hidden;
+
+}
+
+.tag-unassigned{
+	background-color:grey;
+	text-align: center;
+	color: white;
+	font-size: 10px;
+	display: inline-block;
+	width: 14%;
+	margin-left:12px;
+	overflow: hidden;
+
+}
+
+.mini-mod-top{
+	background-color: #5f6f81;
+	display: block;
+	height: 48px;
+}
+
+.mr-customer{
+	width: 33%;
+	display:inline-block;
+	overflow: hidden;
+	float: left;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+.mr-customer > a {
+	/*display:inline-block;*/
+	overflow: hidden;
+	white-space: nowrap;
+	text-decoration: none;
+
+	color:#428bca;
+}
+
+.mr-email {
+	width: 33%;
+	display:block;
+	overflow: hidden;
+	float: left;
+	white-space: nowrap;
+	text-decoration: none;
+	padding-left: 24px;
+
+
+}
+.mr-email > a {
+
+	display:inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-decoration: none;
+	font-size:10px;
+
+}
+
+
+.mr-date{
+	width: 33%;
+	display:inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.mr-title{
+	width: 50%;
+	display:inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	float:left;
+}
+
+.mr-custname{
+	padding-left: 12px;
+	width: 20%;
+	display:inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	float: left;
+
 }
 /*
 .left-col {

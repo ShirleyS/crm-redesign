@@ -50,30 +50,50 @@
       <script type="text/x-handlebars">
       {{outlet}}
       </script>
-    <header>
-      <div>
-        <div class="header-sec-1 container-module">
-          <div class="chart-text">Recent User Activity:</div>
-       
-            <!-- <img width="380px" src="https://ga-dev-tools.appspot.com/public/images/embed-api/screenshot.png"> -->
-        <img width="100%" src="http://basicblogtips.com/wp-content/uploads/2012/04/Viewbix-Charts.jpg">
 
-        </div>
+    <header>
+      
+      <!--   <div class="header-sec-1 container-module">
+          <div class="chart-text">Recent User Activity:</div>
+
+        </div> -->
         
-        <div class="header-sec-2 container-module">    
+        <div class="header-sec-1 ">    
+          <div>
+         <!--    <img id="chart-top" src="http://basicblogtips.com/wp-content/uploads/2012/04/Viewbix-Charts.jpg"> -->
+          <img id="chart-top" src="http://basicblogtips.com/wp-content/uploads/2012/04/Viewbix-Charts.jpg">
+          </div>
+        </div>
+        <div class="header-sec-2">    
+          
+         <!--    <div class="container-module">Open Tasks:&nbsp;&nbsp;&nbsp;&nbsp;39 -->
+            <div id="top-con-1" class="container-module mini-mod"><div class="mini-mod-top">Without Card:<br></div><div class="mini-mod-response">260</div></div>
+            <div id="top-con-2" class="container-module mini-mod"><div class="mini-mod-top">Current Paid:<br></div><div class="mini-mod-response">500</div></div>
+            <div id="top-con-3" class="container-module mini-mod"><div class="mini-mod-top">Expiring Soon:<br></div><div class="mini-mod-response">92</div></div>
+            <div id="top-con-4" class="container-module mini-mod"><div class="mini-mod-top">+/- 2 weeks:<br></div><div class="mini-mod-response">80</div></div>
+            <br>
+            <div id="top-con-5" class="container-module mini-mod"><div class="mini-mod-top">Shopify Signups:<br></div><div class="mini-mod-response">50</div></div>
+            <div id="top-con-6" class="container-module mini-mod"><div class="mini-mod-top">Etsy Signups:<br></div><div class="mini-mod-response">60</div></div>
+            
+            <div id="top-con-7" class="container-module mini-mod"><div class="mini-mod-top">New Tasks:<br></div><div class="mini-mod-response">6</div></div>
+            <div id="top-con-8" class="container-module mini-mod"><div class="mini-mod-top">Active Today:<br></div><div class="mini-mod-response">78%</div></div>
+      
+        </div>  
+     
+
+        <div class="header-sec-3">    
           <ul>
-            <li>Open Tasks:&nbsp;&nbsp;&nbsp;&nbsp;39</li>
-         <!--    <li>New Tasks (last 24 hrs):&nbsp;6</li> -->
-       <!--      <li>% Active Members Today:&nbsp;78%</li> -->
-            <li>Without Card:&nbsp;260</li>
-            <li>Current Paid:&nbsp;500</li>
-            <li>Expiring in the next 48 hrs:&nbsp;92</li>
-            <li>+/- 2 weeks:&nbsp;80</li>
-            <li>Shopify:&nbsp;50</li>
-            <li>Etsy:&nbsp;60</li>
+            <h2 style="color:#5f6f81">Recently Assigned:</h2>
+            <br><br>
+            <li><a>Resolve Twilio Double Fires</a></li><br>
+            <li><a>Close the Meetup Deal</a></li><br>
+            <li><a>Demo the product at Stripe</a></li><br>
+            <li><a>Calls from the new lead list</a></li><br>
+            <li><a>Fix payment processing delay</a></li><br>
+            <li><a>Return Call from Zendesk</a></li><br>
+     
           </ul>
         </div>
-      </div>
     </header> 
   </div>
 
@@ -82,15 +102,15 @@
   <script type="text/x-handlebars" id="index">
     <div class="menu-div">
       <div class="integration-list">
-        <h5>Recent Signups</h5>
         <ul class="left-col">
+        <h5>Recent Signups</h5>
           {{#each customers}}
           <li>
             <div class="expand">
-              <span class="right-arrow">+</span>
-                <span class="menu-cell">  
-                  {{email}}|{{#link-to 'customer' this}} {{customer_name}} {{/link-to}} |{{format-date date}} |Trial Status: 15 Days |Ads Run:2 &nbsp;&nbsp;&nbsp;&nbsp;
-                </span>
+              <span class="arrow" style="width:10%;float:left;height:100%;"><strong>+</strong></span>
+                <div class="menu-cell">  
+                  <div class="menu-row mr-email" style="text-decoration:none">{{email}}</div><div class="menu-row mr-customer">{{#link-to 'customer' this}} {{customer_name}} {{/link-to}}</div> <div class="menu-row mr-date">Signed Up: {{format-date date}}</div>
+                </div>
            
 
               </div>
@@ -100,7 +120,13 @@
                   <div class="sup">
                     <div>
                      
-                      <span> I am getting duplicate texts every time I message Kit. Please help!</span>
+                      <span>Company: Big Co. </span>
+                      <span>Location: San Francisco, CA </span>
+                      <br>
+                      <span>Paid: Yes </span>
+                      <span>|Credit Card Valid: Yes </span>
+                      <span>|Ads Run: 2 </span>
+                      <span>|FB Terms: Yes </span>
 
                       <br />
                       <br />
@@ -119,18 +145,20 @@
       </div>
 
       <div class="integration-list">
-        <h5>Recent Tickets</h5>
         <ul class="right-col">
+        <h5>Recent Tickets</h5>
           {{#each tickets}}
           <li>
             <div class="expand">
-              <span class="right-arrow" style="width:10%;float:right;height:100%;" >+</span>
+              <span class="arrow" style="width:10%;float:left;height:100%;" ><strong>+<</strong></span>
               <span class="menu-cell">  
-                  {{title}} {{customer_name}}
-              </span>
+                  <div class="mr-title">{{title}}</div> 
+                  <div class="mr-custname">{{customer_name}}</div>
                
-              <span>OPEN</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>unassigned</span>
+              <div class="tag-open">OPEN</div>
+              <div class="tag-unassigned">unassigned</div>
 
+              </span>
             </div>
               
             <div class="detail">
