@@ -22,7 +22,7 @@ $(function() {
       // $(this).addClass('active');
       // self.parent().css("background-color", "#c6d0da");
 
-      self.parent().css("background-color", "#c6d0da");
+      self.parent().css("background-color", "lightgrey");
       self.parent().css("height", "100%");
       // self.parent().css("color", "white");
       $expand.text("-");
