@@ -7,11 +7,6 @@ $(function(){
         $('.gn-menu-wrapper').addClass('active'); // add the class to the newly clicked link
     });
 
-});
-
-
-$(function() {
-
   $(".expand").on( "click", function() {
     var self = $(this);
     $(this).next().slideToggle(0);
