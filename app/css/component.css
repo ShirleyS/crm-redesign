@@ -332,34 +332,41 @@ input.gn-search:focus {
 .menu-div {
 	width: 100%;
 	padding: 0 0 0 9%;
+	margin: 0;
 }
 
 .integration-list {
     font-family: 'Open Sans', sans-serif;
-    width: 45%;
+    width: 100%;
   	z-index: 1;
-    display: inline-block;
+    /*display: block;*/
+    overflow: hidden;
+    float: left;
+    margin:0;
+    padding: 0;
 }
 
 .integration-list ul {
-    width: 40%;
+    width: 100%;
     color: #555;
-    padding: 0 3em 0 0;
-    display: block;
-    position: absolute;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    float: left;
+
 }
 .integration-list ul > li {
    	border-bottom: 1px solid #c6d0da;
-    /*: 1px solid #c6d0da;*/
     list-style: none;
     display: block;
     padding: 0;
+    margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: break-word;
-    max-width:300px
-    min-width:120px;
+    max-width:90%;
+
 }
 /*.integration-list ul:last-child {
     border-bottom: 1px solid #c6d0da;
@@ -373,7 +380,7 @@ input.gn-search:focus {
   vertical-align: top;
 	display: inline-block;
 	font-size: 12.5px;
-
+	margin: 0;
 }
 
 .expand {
@@ -400,6 +407,7 @@ span {
 .sup{
     display: inline-block;
     vertical-align: middle;
+    float: left;
     /*width: 90%;*/
 }
 .detail a {
@@ -435,6 +443,8 @@ span {
 	display:inline-block;
 	font-size: 12.5px;
 	width:88%;
+	padding: 0;
+	margin: 0;
 	/*text-decoration: none;*/
 }
 
@@ -445,18 +455,45 @@ span {
     margin: 0 15px 0 0;
 }
 
-.tag-open{
-	background-color:#ca428b;
-	float: right;
-	color: white;
-	font-size: 10px;
-	display: inline-block;
-	text-align: center;
-	width: 8%;
-	margin-left:12px;
-	overflow: hidden;
 
+.mini-mod-top{
+	background-color: #5f6f81;
+	display: block;
+	padding: 4px 12px 0 12px ;
+	height: 48px;
+	/*padding: 16px 0;*/
 }
+
+
+
+
+.mr-title{
+	display:inline-block;
+	float:left;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 50%;
+}
+
+
+.mr-customer-tickets{
+	
+	display:inline-block;
+	float: left;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 20%;
+}
+
+.mr-customer-tickets > a {
+	/*display:inline-block;*/
+	color:#428bca;
+	overflow: hidden;
+	text-decoration: none;
+	white-space: nowrap;
+	/*font-weight: bold;*/
+}
+
 
 .tag-unassigned{
 	background-color:grey;
@@ -464,92 +501,111 @@ span {
 	color: white;
 	font-size: 10px;
 	display: inline-block;
-	width: 14%;
-	margin-left:12px;
+	width: 15%;
+	overflow: hidden;
+}	
+
+.tag-open{
+	background-color:#ca428b;
+	/*float: right;*/
+	color: white;
+	font-size: 10px;
+	display: inline-block;
+	text-align: center;
+	width: 5%;
+	margin-left:5%;
 	overflow: hidden;
 
 }
 
-.mini-mod-top{
-	background-color: #5f6f81;
-	display: block;
-	height: 48px;
-}
 
-.mr-customer{
-	width: 33%;
-	display:inline-block;
-	overflow: hidden;
-	float: left;
-	white-space: nowrap;
-	text-decoration: none;
-}
 
-.mr-customer > a {
-	/*display:inline-block;*/
-	overflow: hidden;
-	white-space: nowrap;
-	text-decoration: none;
-
-	color:#428bca;
-}
 
 .mr-email {
-	width: 33%;
-	display:block;
-	overflow: hidden;
-	float: left;
-	white-space: nowrap;
-	text-decoration: none;
-	padding-left: 24px;
-
-
-}
-.mr-email > a {
-
+	float:left;
 	display:inline-block;
 	overflow: hidden;
+	padding: 0;
 	white-space: nowrap;
+	width: 50%;
+}
+
+.mr-customer-signups{
+	display:inline-block;
+	float: left;
+	overflow: hidden;
+	padding: 0;
 	text-decoration: none;
-	font-size:10px;
+	white-space: nowrap;
+	width: 20%;
 
 }
+
+.mr-customer-signups > a {
+	/*display:inline-block;*/
+	color:#428bca;
+	overflow: hidden;
+	text-decoration: none;
+	white-space: nowrap;
+	/*font-weight: bold;*/
+}
+
+
+.mr-email > a {
+	display:inline-block;
+	font-size:10px;
+	white-space: nowrap;
+	text-decoration: none;
+	overflow: hidden;
+	font-weight: bold;
+
+}
+
 
 
 .mr-date{
-	width: 33%;
-	display:inline-block;
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-.mr-title{
-	width: 50%;
-	display:inline-block;
-	overflow: hidden;
-	white-space: nowrap;
-	float:left;
-}
-
-.mr-custname{
-	padding-left: 12px;
-	width: 20%;
-	display:inline-block;
-	overflow: hidden;
-	white-space: nowrap;
 	float: left;
-
+	display:inline-block;
+	overflow: hidden;
+	width: 15%;
+	white-space: nowrap;
 }
-/*
+
+.mr-trial-type{
+	display: inline-block;
+	width: 5%;
+	margin-left: 4%
+}
+
+.mr-type-trial-paid{
+	background-color:#ca428b;
+	/*float: right;*/
+	color: white;
+	font-size: 10px;
+	display: inline-block;
+	text-align: center;
+	/*width: 10%;*/
+	padding:0 20%;
+	/*width: 20%;*/
+
+	/*overflow: hidden;*/
+}
+
+
 .left-col {
 	float: left;
 	display: inline-block;
+	position: relative;
+	margin: 0;
+
 }
 
 
 .right-col{
-	float: right;
+	margin: 0;
 	display: inline-block;
+	position: relative;
+	float: right;
 
 }
-*/
+

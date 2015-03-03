@@ -112,7 +112,7 @@ var customers = [{
 	terms_accepted: true,
 	audiences:'facebook, instagram',
 	ads_run: 1,
-	trial_status:{type:'trial', card_available:'true', expires: '7 days', started: '2-17-15', ending: '3-2-15'}
+	trial_status:{type:'paid', card_available:'true', expires: '7 days', started: '2-17-15', ending: '3-2-15'}
 },{
 	id:'4',
 	customer_name:'Dwayne Johnson',
@@ -124,7 +124,7 @@ var customers = [{
 	terms_accepted: false,
 	audiences:'twitter',
 	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+	trial_status:{type:'paid', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
 },{
 	id:'5',
 	customer_name:'Test Name5',
@@ -160,7 +160,7 @@ var customers = [{
 	terms_accepted: false,
 	audiences:'twitter',
 	ads_run: 0,
-	trial_status:{type:'trial', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
+	trial_status:{type:'paid', card_available:'false', expires: '10 days', started: '2-26-15', ending: '3-3-15'}
 },{
 	id:'8',
 	customer_name:'Test Name8',

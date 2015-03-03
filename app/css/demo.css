@@ -53,10 +53,11 @@ body {
 
 #chart-top{
 	/*max-width:20%; */
+	height:95%;
 	width: 95%;
-	height:250px;
 	display: inline-block;
 	margin:1em;
+	float: left;
 }
 
 .header-sec-1 {
@@ -72,9 +73,10 @@ body {
 	width: 30%;
 	font-size: 12px;
 	/*padding-bottom: 0;*/
-	margin: 2em;
+	margin: 10px 1em 0 60px;
 	float: left;
 	color: white;
+
 
 }
 
@@ -82,8 +84,9 @@ body {
 	font-size: 12px;
 	display: inline;
 	text-align: left;
-	width:20%;
+	width:30%;
 	float: left;
+	margin: -8px 0 0 0;
 
 	/*background-color: #428bca;*/
 }
