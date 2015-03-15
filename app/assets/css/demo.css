@@ -1,0 +1,153 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background: white;
+	/*background: url("http://www.b71.be/wp-content/uploads/2014/06/background_blue_v0011.jpg");*/
+	padding-left: 60px;
+}
+
+.container > header {
+	color: white;
+	font-family: 'Lato', Arial, sans-serif;
+	margin: 0;
+	/*background: green;*/
+	height: 240px;
+	color: #566473;
+	padding: 0 0 0 9%;
+}
+
+
+.container > header a {
+	color: #566473;
+	text-decoration: none;
+	outline: none;
+
+}
+
+.container > header a:hover {
+	color: #4f7bab;
+}
+
+.container > header h1 {
+	font-size: 3.2em;
+	margin: 0;
+	font-weight: 300;
+}
+
+.container > header span {
+	font-size: 55%;
+	padding: 0;
+}
+
+
+
+.container-module {
+	border: 1px solid #c6d0da;
+	margin: 0;
+	padding: 0;
+}
+
+#chart-top{
+	/*max-width:20%; */
+	height:95%;
+	width: 95%;
+	display: inline-block;
+	margin:1em;
+	float: left;
+}
+
+.header-sec-1 {
+	display: inline;
+	font-size: 12px;
+	width: 30%;
+	float: left;
+}
+
+
+.header-sec-2 {
+	display: block;
+	width: 30%;
+	font-size: 12px;
+	/*padding-bottom: 0;*/
+	margin: 10px 1em 0 60px;
+	float: left;
+	color: white;
+
+
+}
+
+.header-sec-3 {
+	font-size: 12px;
+	display: inline;
+	text-align: left;
+	width:30%;
+	float: left;
+	margin: -8px 0 0 0;
+
+	/*background-color: #428bca;*/
+}
+
+.header-sec-3 > ul {
+	display: inline-block;
+	list-style-type: none;
+}
+
+.header-sec-3 > ul>li {
+	border-bottom: 1px solid #c6d0da;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	/*display: inline-block;*/
+	list-style-type: none;
+	/*padding: 0 0 0 2%;*/
+}
+
+.header-sec-3 > ul >li > a {
+	display: inline-block;
+	list-style-type: none;
+	color:#428bca;
+	font-weight: bold;
+}
+
+
+
+.chart-text {
+	font-size: 14px;
+}
+
+.mini-mod{
+
+	height:120px;
+	padding: 0;
+	margin: 0;
+	background-color: #428bca;
+	font-size: 16px;
+	text-align: center;
+	float:left;
+	width: 25%;
+}
+.mini-mod-response{
+	padding-top: 1em;
+	font-size: 20px;
+}
+
+
+/*@media screen and (max-width: 1025px) {
+	.container > header {
+		margin: 0 auto;
+		padding: 0 50px;
+		font-size: 70%;
+		text-align: right;
+	}
+}*/
+
+/*@media screen and (max-width: 740px) {
+	.kit-logo span {
+		display: none;
+	}
+
+}*/

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ember Starter Kit</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/component.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css' />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../assets/javascript/modernizr.custom.js"></script>
+  
+    <!--   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+<!-- Menu adapted from a google nexus canvas-off menu snippet -->
+  <div class="container">
+    <ul id="gn-menu" class="gn-menu-main">
+      <li class="gn-trigger left-menu">
+        <a class="gn-icon gn-icon-menu"></a>
+        <nav class="gn-menu-wrapper">
+          <div class="gn-scroller">
+              <li class="menu-top-fill"></li>
+            <ul class="gn-menu">
+              <li class="gn-search-item">
+                
+                <a class="gn-icon gn-icon-search"><input placeholder="Search" type="search" class="gn-search"></a>
+              </li>
+              <li>
+                <a class="gn-icon gn-icon-archive">Tasks</a>
+                <ul class="gn-submenu">
+                  <li><a class="gn-icon gn-icon-illustrator">SubItem1</a></li>
+                  <li><a class="gn-icon gn-icon-photoshop">SubItem2</a></li>
+                </ul>
+              </li>
+              <li><a class="gn-icon gn-icon-article">Detailed Stats</a></li>
+
+              <li><a class="gn-icon gn-icon-earth">Team</a></li>
+              <li><a class="gn-icon gn-icon-help">Help</a></li>
+              <li><a class="gn-icon gn-icon-cog">Settings</a></li>
+            </ul>
+          </div>
+          <!-- /gn-scroller -->
+        </nav>
+      </li>
+     
+      <li class="kit-logo"><a href="#">SS. CRM</a></li>
+    </ul>
+  
+
+    <header>
+      
+      <!--   <div class="header-sec-1 container-module">
+          <div class="chart-text">Recent User Activity:</div>
+
+        </div> -->
+        
+        <div class="header-sec-1 ">    
+          <div>
+         <!--    <img id="chart-top" src="http://basicblogtips.com/wp-content/uploads/2012/04/Viewbix-Charts.jpg"> -->
+          <img id="chart-top" src="http://basicblogtips.com/wp-content/uploads/2012/04/Viewbix-Charts.jpg">
+          </div>
+        </div>
+        <div class="header-sec-2">    
+          
+         <!--    <div class="container-module">Open Tasks:&nbsp;&nbsp;&nbsp;&nbsp;39 -->
+            <div id="top-con-1" class="container-module mini-mod"><div class="mini-mod-top">Without Card:<br></div><div class="mini-mod-response">260</div></div>
+            <div id="top-con-2" class="container-module mini-mod"><div class="mini-mod-top">Current Paid:<br></div><div class="mini-mod-response">500</div></div>
+            <div id="top-con-3" class="container-module mini-mod"><div class="mini-mod-top">Expiring Soon:<br></div><div class="mini-mod-response">92</div></div>
+            <div id="top-con-4" class="container-module mini-mod"><div class="mini-mod-top">+/- 2 weeks:<br></div><div class="mini-mod-response">80</div></div>
+            <br>
+            <div id="top-con-5" class="container-module mini-mod"><div class="mini-mod-top">Shopify Signups:<br></div><div class="mini-mod-response">50</div></div>
+            <div id="top-con-6" class="container-module mini-mod"><div class="mini-mod-top">Etsy Signups:<br></div><div class="mini-mod-response">60</div></div>
+            
+            <div id="top-con-7" class="container-module mini-mod"><div class="mini-mod-top">New Tasks:<br></div><div class="mini-mod-response">6</div></div>
+            <div id="top-con-8" class="container-module mini-mod"><div class="mini-mod-top">Active Today:<br></div><div class="mini-mod-response">78%</div></div>
+      
+        </div>  
+     
+
+        <div class="header-sec-3">    
+          <ul>
+            <h2 style="color:#5f6f81">Recently Assigned:</h2>
+            <br><br>
+            <li><a>Resolve Twilio Double Fires</a></li><br>
+            <li><a>Close the Meetup Deal</a></li><br>
+            <li><a>Demo the product at Stripe</a></li><br>
+            <li><a>Calls from the new lead list</a></li><br>
+            <li><a>Fix payment processing delay</a></li><br>
+            <li><a>Return Call from Zendesk</a></li><br>
+     
+          </ul>
+        </div>
+    </header> 
+  </div>
+
+
+<!-- Accordion Customers -->
+  <script type="text/x-handlebars" id="index">
+    <div class="menu-div">
+      <div class="integration-list">
+        <ul>
+        <h5>Recent Tickets</h5>
+          {{#each tickets}}
+          <li>
+            <div class="expand">
+              <span class="arrow" style="width:5%;float:left;height:100%;" ><strong>+<</strong></span>
+              <span class="menu-cell">  
+                  <div class="mr-title">{{title}}</div> 
+                  <div class="mr-customer-tickets">{{#link-to 'customer' this}} {{customer_name}} {{/link-to}}</div>
+               
+              <div class="tag-unassigned">unassigned</div>
+              <div class="tag-open">OPEN</div>
+
+              </span>
+            </div>
+              
+            <div class="detail">
+
+              <div class="right" style="width:85%;float:right;height:100%;padding-left:20px;">
+                <div class="sup">
+                  <div>
+                   
+                    <span> I am getting duplicate texts every time I message Kit. Please help!</span>
+
+                    <br />
+                    <br />
+                    <a href="#">Run Report</a>
+                    <a href="#">Email</a>
+                    <a href="#">Text</a>
+                    <a href="#">Edit</a>
+                    <a href="#">Assign</a>
+                  </div>
+                </div>
+              </div>
+            </div>     
+          </li>            
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="integration-list">
+      <ul>
+        <h5>Recent Signups</h5>
+          {{#each customers}}
+          <li>
+            <div class="expand">
+              <span class="arrow" style="width:5%;float:left;height:100%;"><strong>+</strong></span>
+                <div class="menu-cell">  
+                  <div class="menu-row mr-email" style="text-decoration:none">{{email}}</div>
+                  <div class="menu-row mr-customer-signups">{{#link-to 'customer' this}} {{customer_name}} {{/link-to}}</div> 
+                  <div class="menu-row mr-date">Signed Up: {{format-date date}}</div>
+                  <div class="menu-row mr-trial-type">Type: <div class="mr-type-trial-paid">{{trial_status.type}}</div></div>
+                </div>
+           
+
+              </div>
+              <div class="detail">
+
+                <div class="right" style="width:85%;float:right;height:100%;padding-left:10px;">
+                  <div class="sup">
+                    <div>
+                     
+                      <span>Company: Big Co. </span>
+                      <span>Location: San Francisco, CA </span>
+                      <br>
+                      <span>Paid: Yes </span>
+                      <span>|Credit Card Valid: Yes </span>
+                      <span>|Ads Run: 2 </span>
+                      <span>|FB Terms: Yes </span>
+
+                      <br />
+                      <br />
+                      <a href="#">Run Report</a>
+                      <a href="#">Email</a>
+                      <a href="#">Text</a>
+                      <a href="#">Edit</a>
+                      <a href="#">Assign</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </li>            
+          {{/each}}
+        </ul>
+        
+      </div>
+    </div>
+
+
+            
+    <div class="span9">
+      {{outlet}}
+    </div>
+  </script>
+  <!-- /container -->
+
+  <script type="text/x-handlebars" id="about">
+    <div class="about">
+      <p> This is fake lorem ipsum, um ipsum lorem? lorem ipsum, um ipsum lorem lorem ipsum, um ipsum lorem lorem ipsum, um ipsum lorem lorem ipsum, um ipsum lorem lorem ipsum, um ipsum loremlorem ipsum, um ipsum loremlorem ipsum, um ipsum lorem</p>
+    </div>
+
+    <p>{{input type="text" value=customer_name}}</p>
+    <p>{{input type="text" value=email}}</p>
+    <p>{{textarea value=timestamp}}</p>
+  </script>
+
+
+
+  <!-- // <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.javascript/2.1.0/moment.min.js"></script> -->
+  <!-- Ember + Ember Data -->  
+  <script src="../assets/javascript/vendor/jquery.js"></script>
+  <script src="../assets/javascript/libs/ember-template-compiler-1.10.0.js"></script>
+  <script src="../assets/javascript/libs/ember-1.10.0.debug.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+  <!-- Ember + Ember Data -->  
+  <script src="http://builds.emberjs.com/tags/v1.9.1/ember.min.js"></script>
+  <script src="http://builds.emberjs.com/tags/v1.0.0-beta.12/ember-data.min.js"></script>
+  <!-- 
+  <script src="https://cdn.firebase.com/javascript/client/2.2.1/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/emberfire/1.3.3/emberfire.min.js"></script>
+ -->
+  <script src="../assets/javascript/app.js"></script>
+ <!-- // <script src="../assets/javascript/models/fixtureData.js"></script> -->
+  <script src="../assets/javascript/classie.js"></script>
+  <script src="../assets/javascript/gnmenu.js"></script>
+  <script>
+    new gnMenu( document.getElementById( 'gn-menu' ) );
+  </script>
+  <script src="../assets/javascript/custom.js"></script>
+  <!-- to activate the test runner, add the "?test" query string parameter -->
+  <!-- // <script src="../tests/runner.js"></script> -->
+</body>
+</html>

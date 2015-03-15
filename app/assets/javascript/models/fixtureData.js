@@ -1,78 +1,25 @@
-App = Ember.Application.create();
-
-App.Customer = DS.Model.extend({
-  customer_name: DS.attr('string'),
-  email: DS.attr('string'),
-  timestamp: DS.attr('number')
-});
 
 
-App.Ticket = DS.Model.extend({
-  title: DS.attr('string'),
-  // customer_name: DS.attr('string'),
-  timestamp: DS.attr('number')
-});
+// App.ApplicationAdapter = DS.FixtureAdapter;
 
-
-App.Router.map(function(){
-	this.resource('about');
-	this.resource('customers', function(){
-		this.resource('customer', { path: ':customer_id' });		
-		this.resource('new');
-	});
-});
-
-
-// App.IndexController = Ember.ArrayController.extend({
-//   limitedContent: function() {
-//     // in this case '2' is the limit parameter
-//     return this.get('content').splice(0, 2);
-//   }.property('content')
+// App.Documenter = DS.Model.extend({
+//   firstName: DS.attr( 'string' ),
+//   lastName: DS.attr( 'string' )
 // });
 
-App.IndexRoute = Ember.Route.extend({
-  model: function() {
-    return {
-    	customers:customers,
-    	tickets:tickets
-    }
-     
- 	}
-	// console.log("hi")
-});
+// App.Documenter.reopenClass({
+//   FIXTURES: [
+//     { id: 1, firstName: 'Trek', lastName: 'Glowacki' },
+//     { id: 2, firstName: 'Tom' , lastName: 'Dale'     }
+//   ]
+// });
 
-
-
-App.CustomersRoute = Ember.Route.extend({
-	model: function(){
-		return customers;
-	}
-});
-
-
-App.CustomerRoute = Ember.Route.extend({
-	model: function(params){
-		return customers.findBy('id', params.customer_id);
-	}
-});
-
-App.CustomerController = Ember.ObjectController.extend({
-	isEditing: false,
-
-	actions:{
-		edit: function(){
-			this.set('isEditing', true);
-		},
-
-		doneEditing: function(){
-			this.set('isEditing',false);
-		}
-	}
-});
-
-Ember.Handlebars.helper('format-date', function(date){
-	return moment(date).fromNow();
-});
+// App.DocumenterRoute = Ember.Route.extend({
+//   model: function() {
+//     return this.store.find('documenter', 1); // returns a promise that will resolve
+//                                              // with the record representing Trek Glowacki
+//   }
+// });
 
 
 
@@ -333,7 +280,7 @@ var customers = [{
 }];
 
 
-var tickets =[{id:'1',title:'Receiving duplicate texts', customer_name:"John Doe 0"},
+var tickets = [{id:'1',title:'Receiving duplicate texts', customer_name:"John Doe 0"},
 {id:'2',title:'Kit not responding', customer_name:"John Doe1"},
 {id:'3',title:"I need to change my number", customer_name:"John Doe2"},
 {id:'4',title:"I need to change my number", customer_name:"John Doe3"},
